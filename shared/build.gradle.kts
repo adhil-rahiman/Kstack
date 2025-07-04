@@ -8,6 +8,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
 }
 
+val customPackageName: String by project
+
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -50,7 +52,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.droidnotes.kstack.shared"
+    namespace = "$customPackageName.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

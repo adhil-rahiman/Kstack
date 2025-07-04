@@ -12,6 +12,8 @@ plugins {
     alias(libs.plugins.composeHotReload)
 }
 
+val customPackageName: String by project
+
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -98,11 +100,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.droidnotes.kstack"
+    namespace = customPackageName
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.droidnotes.kstack"
+        applicationId = customPackageName
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -130,11 +132,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "com.droidnotes.kstack.MainKt"
+        mainClass = "$customPackageName.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.droidnotes.kstack"
+            packageName = customPackageName
             packageVersion = "1.0.0"
         }
     }

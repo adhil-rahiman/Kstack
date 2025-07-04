@@ -4,10 +4,11 @@ plugins {
     application
 }
 
-group = "com.droidnotes.kstack"
+val customPackageName: String by project
+group = customPackageName
 version = "1.0.0"
 application {
-    mainClass.set("com.droidnotes.kstack.ApplicationKt")
+    mainClass.set("$customPackageName.ApplicationKt")
     
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
