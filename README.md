@@ -1,4 +1,35 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop, Server.
+# 🧩 Kotlin Compose Multiplatform Starter Template
+
+A production-ready, elegant Compose Multiplatform starter project targeting Android, iOS, Web, Desktop, Server. 
+Built with:
+
+- ✅ Jetpack Compose (Android, iOS, Desktop)
+- 🧱 Modular Clean Architecture
+- ⚙️ Ktor + DI + Resource Loader pre-wired
+- 🎨 Ready-to-use design system
+
+## 🚀 Quick Start
+
+1. Click [**Use this template**](../../generate)
+2. Clone the generated repo
+3. Open in Android Studio (Canary recommended)
+4. Run the app on Android or iOS
+
+## 🧪 Tech Stack
+
+- Kotlin Multiplatform (KMP)
+- Jetpack Compose Multiplatform
+- Ktor Client
+- Dependency Injection (Koin or Hilt)
+- Material 3 UI (with custom theme)
+
+## 🛠️ Setup
+
+No extra steps required — it's ready out of the box.
+
+## 📦 Folder Structure
+
+
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
   It contains several subfolders:
