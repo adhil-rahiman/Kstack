@@ -1,0 +1,7 @@
+package com.droidnotes.kstack
+
+interface Platform {
+    val name: String
+}
+
+expect fun getPlatform(): Platform
